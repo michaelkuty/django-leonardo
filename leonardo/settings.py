@@ -8,9 +8,9 @@ import warnings
 
 from django import VERSION
 from leonardo.base import leonardo, default
-from leonardo.utils.settings import (get_conf_from_module, merge,
-                                     get_leonardo_modules, get_loaded_modules,
-                                     DJANGO_CONF)
+from leonardo.utils.settings import merge
+from leonardo.conf.spec import DJANGO_CONF
+
 from importlib import import_module  # noqa
 from django.utils.module_loading import module_has_submodule  # noqa
 
@@ -318,3 +318,5 @@ conf.HORIZON_CONFIG = HORIZON_CONFIG
 
 if DEBUG:
     logging.basicConfig(level=logging.DEBUG)
+
+raise Exception("CONSTANCE_CONFIG_GROUPS")
